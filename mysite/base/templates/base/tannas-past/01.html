@@ -1,0 +1,15 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<strong>Your past</strong>
+<p>
+
+	You want me to tell you the story of how you came to us again?<p>
+
+		<img src="{% static "base/intro/teacher.png" %}" height="550" width="400">
+
+		<div style="text-align:right">
+			<h3><a href="{% url 'tannas-past02' %}">continue<a /></h3>
+		</div>
+		{% endblock %}

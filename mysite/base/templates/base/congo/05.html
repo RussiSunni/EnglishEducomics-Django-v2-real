@@ -1,0 +1,32 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<img src="{% static 'base/congo/fight_sequence05.jpg' %}" class="img-fluid">
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+            <strong>Choose the correct speech bubble to proceed</strong><br><br><br>
+            <div class="alert alert-primary" role="alert" onclick="progress()" id="correct">
+                Fairy, you are saving me!
+            </div>
+            <div class="alert alert-dark" role="alert">
+                Fairy, you are saved me!
+            </div>
+            <div class="alert alert-info" role="alert">
+                Fairy, you will saving me!
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function progress() {
+        document.getElementById("correct").innerHTML = "Dang that blasted fairy!";
+        setTimeout(function () { location.href = "congo06"; }, 4000);
+    }
+</script>
+
+{% endblock %}

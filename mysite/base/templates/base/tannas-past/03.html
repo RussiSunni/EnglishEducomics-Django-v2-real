@@ -1,0 +1,16 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+
+<img src="{% static "base/tannas-past/tannas-past02.jpg" %}" class="img-fluid">
+<p>
+    <div class="container">
+        <div class="row">
+            And had all a child could want...<p>
+        </div>
+    </div>
+    <div style="text-align:right">
+        <a href="{% url 'tannas-past04' %}">continue<a />
+    </div>
+    {% endblock %}

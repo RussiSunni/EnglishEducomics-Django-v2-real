@@ -1,0 +1,30 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<img src="{% static 'base/congo/fight_sequence04.jpg' %}" class="img-fluid">
+<div class="container">
+    <div class="row">
+        <strong>Well kids, it seems that she has gotten herself into trouble again. Do you think I should help her
+            out?</strong><br><br><br>
+    </div>
+    <div class="row">
+        <div class="alert alert-primary" role="alert">
+            No
+        </div>
+    </div>
+    <div class="row">
+        <div class="alert alert-dark" role="alert" onclick="progress()" id="correct">
+            Yes
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function progress() {
+        document.getElementById("correct").innerHTML = "Ok, hang on";
+        setTimeout(function () { location.href = "congo05"; }, 4000);
+    }
+</script>
+{% endblock %}

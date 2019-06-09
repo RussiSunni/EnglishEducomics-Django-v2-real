@@ -1,0 +1,32 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<img src="{% static 'base/congo/fight_sequence02.jpg' %}" class="img-fluid">
+<div class="container">
+  <div class="row">
+
+
+    <strong>Choose the correct speech bubble to proceed</strong><br><br><br>
+    <div class="alert alert-primary" role="alert">
+      Darn! This dark mage sounds too powerful for me!
+    </div>
+    <div class="alert alert-dark" role="alert">
+      Darn! This dark mage sees too powerful for me!
+    </div>
+    <div class="alert alert-info" role="alert" onclick="progress()" id="correct">
+      Darn! This dark mage looks too powerful for me!
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  function progress() {
+    document.getElementById("correct").innerHTML = "You will feel my awesome power, mortal!";
+    setTimeout(function () { location.href = "congo03"; }, 4000);
+  }
+</script>
+
+{% endblock %}

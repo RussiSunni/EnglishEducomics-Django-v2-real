@@ -1,0 +1,39 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+<div class="container h-100 d-flex flex-column justify-content-center">
+    <div class="row h-100">
+        {% load static %}
+        <div class="col-12 col-md-6 col-lg-6 mt-3 my-auto">
+            <div class="row mb-3">
+                <div class="col">
+                    <h5 class="text-center text" id="fairy-dialogue-01"><em>Well junior, it looks like I have been
+                            assigned to look after you for now.</em></h5>
+                    <h5 class="text-center text d-none" id="fairy-dialogue-02"><em>First, we will need to get you a
+                            familiar</em> <a href=" {% url 'choosefamiliar' %}" class="text-dark">---></a></h5>
+                </div>
+            </div>
+            <input id="submitFamiliar" value="choose" type="button" class="btn btn-secondary float-right d-none">
+
+        </div>
+        <div class="col-12 col-md-6 col-lg-5 mt-5 my-auto">
+            <img src="{% static "base/intro/fairy.png" %}" alt="fairy"
+                class="rounded img-fluid homescreen-fairyimg fairy" id="fairy">
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+<script>
+    $("#fairy").click(function () {
+        $("#fairy-dialogue-01").addClass("d-none");
+        $("#fairy-dialogue-02").removeClass("d-none");
+    });
+
+</script>
+
+{% endblock %}

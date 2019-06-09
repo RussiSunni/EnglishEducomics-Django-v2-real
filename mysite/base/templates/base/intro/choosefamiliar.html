@@ -1,0 +1,80 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<div class="container h-100 d-flex flex-column justify-content-center">
+    <div class="row h-100">
+
+        <div class="col-12 col-md-6 col-lg-5 mt-5 my-auto">
+            <img src="{% static "base/intro/fairy.png" %}" alt="fairy" class="rounded img-fluid homescreen-fairyimg">
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-6 mt-3 my-auto">
+            <div class="row mb-3">
+                <div class="col">
+                    <h5 class="text-center text"><span id='chooseFamiliar'><span id="currentUser"></span>, choose
+                            wisely</span></h5>
+                </div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <label class="homescreen-familiar">
+                            <input type="radio" name="familiar" value="duck">
+                            <img src="{% static "base/intro/ducky.jpg" %}" class="img-fluid img-thumbnail" alt="Duck"
+                                id="myImg1">
+                            <figcaption>Duck</figcaption>
+                        </label>
+                    </div>
+                    <div class="col">
+                        <label class="homescreen-familiar">
+                            <input type="radio" name="familiar" value="bird">
+                            <img src="{% static "base/intro/bird.jpg" %}" class="img-fluid img-thumbnail" alt="Bird"
+                                id="myImg2">
+                            <figcaption>Bird</figcaption>
+                        </label>
+                    </div>
+                    <div class="col">
+                        <label class="homescreen-familiar">
+                            <input type="radio" name="familiar" value="alien">
+                            <img src="{% static "base/intro/alien.jpg" %}" class="img-fluid img-thumbnail" alt="Alien"
+                                id="myImg3">
+                            <figcaption>Alien</figcaption>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="homescreen-familiar">
+                            <input type="radio" name="familiar" value="dino">
+                            <img src="{% static "base/intro/dino.jpg" %}" class="img-fluid img-thumbnail" alt="Dino"
+                                id="myImg4">
+                            <figcaption>Dino</figcaption>
+                        </label>
+                    </div>
+                    <div class="col">
+                        <label class="homescreen-familiar">
+                            <input type="radio" name="familiar" value="mouse">
+                            <img src="{% static "base/intro/noodnic.jpg" %}" class="img-fluid img-thumbnail" alt="Mouse"
+                                id="myImg5">
+                            <figcaption>Mouse</figcaption>
+                        </label>
+                    </div>
+                    <div class="col">
+                        <label class="homescreen-familiar">
+                            <input type="radio" name="familiar" value="selki">
+                            <img src="{% static "base/intro/selki.jpg" %}" class="img-fluid img-thumbnail" alt="Selki"
+                                id="myImg6">
+                            <figcaption>Selki</figcaption>
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <input id="submitFamiliar" value="choose" type="button" class="btn btn-secondary float-right d-none">
+            <a id="homescreen-proceed-btn" class="btn btn-outline-dark ml-auto float-right d-none"
+                href="{% url 'hub' %}" role="button">proceed</a>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+{% endblock %}

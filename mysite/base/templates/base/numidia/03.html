@@ -1,0 +1,43 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+
+<div class="content">
+    <div class="container text-drag">
+        <div class="row justify-content-center mt-3">
+            <img src="{% static "base/numidia/my-family.svg" %}" class="img-fluid">
+        </div>
+
+        <div class="row mt-3">
+            <div class="col">
+                <img src="{% static "base/numidia/exercise-02.png" %}" class="img-fluid mx-auto d-block rounded panel">
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <p>Sometimes, I</p>
+
+            <select class="mr-2 ml-2" id="question">
+                <option selected>Choose...</option>
+                <option value="1">Look up</option>
+                <option value="2">Look after</option>
+                <option value="3">Look for</option>
+                <option value="4">Look forward</option>
+            </select>
+
+
+            <p>serenity by reading books.</p>
+        </div>
+
+        <div class="row mt-2">
+            <div id="result" class="ml-auto text-white p-2"></div>
+        </div>
+
+        <div class="row mt-2" id="q-2">
+            <input class="btn btn-outline-info" type="submit" value="Submit" id="submit2"><a
+                class="btn btn-outline-dark ml-auto" href="{% url 'numidia04' %}" role="button">next</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

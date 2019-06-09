@@ -1,0 +1,16 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<img src="{% static "base/tannas-past/tannas-past03.jpg" %}" class="img-fluid">
+<p>
+    <div class="container">
+        <div class="row">
+            Lived in luxury...
+        </div>
+    </div>
+
+    <div style="text-align:right">
+        <a href="{% url 'room' %}">continue<a />
+    </div>
+    {% endblock %}

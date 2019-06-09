@@ -1,0 +1,33 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<img src="{% static 'base/congo/fight_sequence06.jpg' %}" class="img-fluid">
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+            <strong>Choose the correct speech bubble to proceed</strong><br><br><br>
+            <div class="alert alert-primary" role="alert">
+                Now what did I ask you about wondering off on your own?
+            </div>
+            <div class="alert alert-dark" role="alert">
+                Now what did I say you about wondering off on your own?
+            </div>
+            <div class="alert alert-info" role="alert" onclick="progress()" id="correct">
+                Now what did I tell you about wondering off on your own?
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function progress() {
+        document.getElementById("correct").innerHTML = "I know, I know, I'm sorry.";
+        setTimeout(function () { location.href = "hub"; }, 4000);
+    }
+</script>
+
+
+{% endblock %}

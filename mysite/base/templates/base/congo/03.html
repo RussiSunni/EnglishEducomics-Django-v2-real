@@ -1,0 +1,31 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<img src="{% static 'base/congo/fight_sequence03.jpg' %}" class="img-fluid">
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+            <strong>Choose the correct speech bubble to proceed</strong><br><br><br>
+            <div class="alert alert-primary" role="alert">
+                This is the beginning for me!
+            </div>
+            <div class="alert alert-dark" role="alert" onclick="progress()" id="correct">
+                This is the end for me!
+            </div>
+            <div class="alert alert-info" role="alert">
+                This is the finish for me!
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function progress() {
+        document.getElementById("correct").innerHTML = "Ha Ha Ha";
+        setTimeout(function () { location.href = "congo04"; }, 4000);
+    }
+</script>
+{% endblock %}

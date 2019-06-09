@@ -1,0 +1,37 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<img src="{% static 'base/congo/fight_sequence01.jpg' %}" class="img-fluid">
+<div class="container">
+    <div class="row">
+        <strong>Choose the correct speech bubble to proceed</strong>
+    </div>
+    <div class="row">
+        <div class="alert alert-primary" role="alert" onclick="progress()" id="correct">
+            Vile monster! You will not terrorise the forest any longer!<p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="alert alert-dark" role="alert">
+            Vile monster! You have not terrorise the forest any longer!<p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="alert alert-info" role="alert">
+            Vile monster! You are not terrorise the forest any longer!
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function progress() {
+        document.getElementById("correct").innerHTML = "We'll see about that!";
+        setTimeout(function () { location.href = "congo02"; }, 4000);
+
+    }
+</script>
+
+{% endblock %}
