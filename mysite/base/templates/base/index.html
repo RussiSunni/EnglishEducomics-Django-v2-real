@@ -30,39 +30,36 @@
                             <a class="navbar-brand" href="#">
                                 <img src="{% static "base/baseimages/logo.png" %}" width="100" height="100" alt="">
                             </a>
-
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto">
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="./views/blog.php">about us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="btn btn-outline-dark rounded-button" href="contact.html"
-                                            role="button">Contact Us</a>
-                                    </li>
-                                </ul>
-                            </div>
                         </nav>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                    </div>
+                    <div class="col-6">
+                        <h1 id="changeText1">Learn English</h1>
+                        <h2 id="changeText2" class="mb-3">with comics</h2>
+                        <a class="btn" role="button" id="portal">
 
-                <h1 id="changeText1">Learn English</h1>
-                <h2 id="changeText2" class="mb-3">with comics</h2>
-                <a class="btn" role="button" id="portal">
-
-                    <img src="{% static "base/website/door-closed.png" %}" alt="doorway closed" width=100
-                        id="door-closed">
-                    <img src="{% static "base/website/door-open.gif" %}" alt="doorway open" class="d-none" width=100
-                        id="door-open"></a>
-                <p><em>(gif credit to: Jacqueline Jing Lin
-                        https://giphy.com/gifs/open-snapchat-vector-dYQfIcryc28bS6132z/media, to be replaced)</em></p>
+                            <img src="{% static "base/website/door-closed.png" %}" alt="doorway closed" width=100
+                                id="door-closed">
+                            <img src="{% static "base/website/door-open.gif" %}" alt="doorway open" class="d-none"
+                                width=100 id="door-open"></a>
+                        <p><em>(gif credit to: Jacqueline Jing Lin
+                                https://giphy.com/gifs/open-snapchat-vector-dYQfIcryc28bS6132z/media, to be
+                                replaced)</em>
+                        </p>
+                    </div>
+                    <div class="col-3">
+                        <img src="{% static "base/intro/fairy.png" %}" alt="Fairy" width=300>
+                    </div>
+                </div>
             </div>
         </header>
     </div>
-    <div class="container mt-5">
+    <!-- <div class="container mt-5">
         <div class="section">
             <div class="row mt-1">
                 <div class="col-lg-1">
@@ -131,17 +128,17 @@
                     <div class="col-md-3"></div>
                 </div>
             </form>
-        </footer>
-        </section>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <script src="{% static "base/javascript/script.js" %}"></script>
+        </footer> -->
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="{% static "base/javascript/script.js" %}"></script>
 </body>
 
 </html>
