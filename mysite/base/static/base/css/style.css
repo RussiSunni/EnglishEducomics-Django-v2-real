@@ -205,6 +205,16 @@ a {
 	cursor: pointer;
 }
 
+/* #fairy {
+	max-width: 400px;
+}
+
+@media screen and (max-width: 992px) {
+	#fairy {
+		
+		max-width: 300px;
+	} */
+
 
 	/* HIDE RADIO */
 [type=radio] { 
