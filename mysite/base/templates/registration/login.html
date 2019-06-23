@@ -20,7 +20,7 @@
                 class="rounded mb-3 border border-dark panel" height="400" width="300">
             <div id="introduction">
                 <p>Hello child,<br>
-                    Welcome to Sunshine English School.</p>
+                    Welcome to Sunshine English School.</p>test
 
 
                 <form>
@@ -31,14 +31,7 @@
                     <a href="{% url 'signup' %}">I'm a new student</a>
 
                 </form>
-                <form method="post">
-                    {% csrf_token %}
-                    <input type="hidden" name="next" value="{{ next }}">
 
-                    {{ form|crispy }}
-
-                    <button type="submit" class="btn btn-primary btn-block">Log in</button>
-                </form>
 
             </div>
         </div>
